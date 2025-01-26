@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user.model');
 
-// Get all users
+// Handles GET to /api/users
 router.get('/', async (req, res) => {
   try {
     const users = await User.find({}).select('-password');
@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Create user
+// Handles POST to /api/users
 router.post('/', async (req, res) => {
   try {
     const user = new User(req.body);

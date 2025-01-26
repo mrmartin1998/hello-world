@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ThemeSwitcher from '../ThemeSwitcher';
+import ThemeSwitcher from '@/components/ThemeSwitcher';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -46,6 +46,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <ThemeSwitcher />
+          <Link to="/users" className="btn btn-ghost">Users</Link>
         </div>
       </div>
     </div>

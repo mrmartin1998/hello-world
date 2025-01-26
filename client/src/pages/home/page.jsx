@@ -1,8 +1,8 @@
 import React from 'react';
-import HelloWorld from '../components/HelloWorld';
-import FirstComponent from '../components/FirstComponent';
+import HelloWorld from '@/components/HelloWorld';
+import FirstComponent from '@/components/FirstComponent';
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div className="space-y-8">
       <HelloWorld />
@@ -11,4 +11,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default HomePage; 

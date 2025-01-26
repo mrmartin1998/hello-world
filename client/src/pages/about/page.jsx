@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About = () => {
+const AboutPage = () => {
   return (
     <div className="prose lg:prose-xl mx-auto">
       <h1 className="text-4xl font-bold text-center mb-8">About</h1>
@@ -21,4 +21,4 @@ const About = () => {
   );
 };
 
-export default About; 
+export default AboutPage; 
