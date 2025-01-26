@@ -12,10 +12,10 @@ const CreateUser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const data = await userService.createUser(formData);
-      setMessage(data.message || 'User created successfully!');
+        const data = await userService.createUser(formData);
+        setMessage('User created successfully!');
     } catch (error) {
-      setMessage('Error creating user');
+        setMessage('Error creating user');
     }
   };
 

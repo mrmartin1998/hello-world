@@ -15,7 +15,7 @@ connectDB();
 app.use(cors());                    // Allows frontend to make requests
 app.use(helmet());                  // Adds security headers
 app.use(morgan('dev'));            // Logs requests to console
-app.use(express.json());           // Parses JSON request bodies
+app.use(express.json());           // Parses incoming JSON
 app.use(express.urlencoded({ extended: true }));
 
 // Custom logger
@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 });
 
 // Routes
-app.use('/api/users', userRoutes);  // Sends all /api/users/* to user.routes.js
+app.use('/api/users', userRoutes);  // Routes to correct handler
 
 // Basic route
 app.get('/', (req, res) => {
