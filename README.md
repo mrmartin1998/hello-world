@@ -1,33 +1,24 @@
-# Hello World MERN Application
+# MERN Stack Template
 
-A full-stack MERN (MongoDB, Express.js, React.js, Node.js) application.
+A production-ready template for building full-stack applications with MongoDB, Express.js, React, and Node.js.
 
-## Structure
+## Features
+- 🔒 Security best practices with helmet
+- 📝 API validation with express-validator
+- 🔄 State management ready
+- 🎨 Basic styling setup
+- 🚀 Development and production configurations
 
-- `/client` - Frontend React application
-- `/server` - Backend Node.js/Express application
+## Quick Start
+1. Click "Use this template" on GitHub
+2. Clone your new repository
+3. Follow the setup checklist in `.github/TEMPLATE_CHECKLIST.md`
 
-## Setup Instructions
+## Development Setup
+[Development instructions...]
 
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   # Install backend dependencies
-   cd server
-   npm install
+## Production Setup
+[Production instructions...]
 
-   # Install frontend dependencies
-   cd ../client
-   npm install
-   ```
-3. Create `.env` files in both client and server directories
-4. Run the development servers:
-   ```bash
-   # Run backend
-   cd server
-   npm run dev
-
-   # Run frontend
-   cd ../client
-   npm run dev
-   ``` 
+## Best Practices
+[Coding standards, git workflow, etc...]
