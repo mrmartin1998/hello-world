@@ -46,7 +46,6 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <ThemeSwitcher />
-          <Link to="/users" className="btn btn-ghost">Users</Link>
         </div>
       </div>
     </div>

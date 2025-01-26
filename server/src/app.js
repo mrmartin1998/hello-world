@@ -11,21 +11,21 @@ const app = express();
 // Connect to MongoDB
 connectDB();
 
-// Middleware
-app.use(cors());
-app.use(helmet());
-app.use(morgan('dev'));
-app.use(express.json());
+// Middleware Stack (requests flow through these in order):
+app.use(cors());                    // Allows frontend to make requests
+app.use(helmet());                  // Adds security headers
+app.use(morgan('dev'));            // Logs requests to console
+app.use(express.json());           // Parses JSON request bodies
 app.use(express.urlencoded({ extended: true }));
 
-// Add this before your routes
+// Custom logger
 app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url}`);
-  next();
+    console.log(`${req.method} ${req.url}`);
+    next();  // Passes request to next middleware
 });
 
 // Routes
-app.use('/api/users', userRoutes);
+app.use('/api/users', userRoutes);  // Sends all /api/users/* to user.routes.js
 
 // Basic route
 app.get('/', (req, res) => {

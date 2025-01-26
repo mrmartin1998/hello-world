@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { userService } from '@/services/api';
 
 const SignIn = () => {
   const [formData, setFormData] = useState({
@@ -10,15 +11,8 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/users/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-      });
-      const data = await response.json();
-      if (response.ok) {
+      const data = await userService.signIn(formData);
+      if (data.token) {
         setMessage('Signed in successfully!');
         localStorage.setItem('token', data.token);
       } else {
