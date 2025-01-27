@@ -22,3 +22,15 @@ A production-ready template for building full-stack applications with MongoDB, E
 
 ## Best Practices
 [Coding standards, git workflow, etc...]
+
+# Branch Strategy
+This template comes with a pre-configured branch strategy. See `.github/BRANCH_STRATEGY.md` for details.
+
+The repository includes example branches:
+- `feature/example`
+- `bugfix/example`
+- `release/example`
+
+When using this template, you can either:
+1. Keep the branch structure and delete the example content
+2. Start fresh with just the main and develop branches
